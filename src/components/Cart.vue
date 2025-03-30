@@ -22,7 +22,11 @@
                                     <img :src="item.image" width="60" height="60" alt="">
                                 </td>
                                 <td>{{ item.name }}</td>
-                                <td>{{ item.quantity }}</td>
+                                <td>
+                                    <i class="bi bi-caret-up" @click="data.incrementQty(item)"></i>
+                                    {{ item.quantity }}
+                                    <i class="bi bi-caret-down" @click="data.decrementQty(item)"></i>
+                                </td>
                                 <td>{{ item.price }}</td>
                                 <td>{{ item.price * item.quantity }}</td>
                             </tr>
@@ -40,5 +44,7 @@
 </script>
 
 <style scoped>
-
+    i {
+        cursor: pointer;
+    }
 </style>
