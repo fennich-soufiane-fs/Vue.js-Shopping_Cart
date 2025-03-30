@@ -7,12 +7,12 @@
 </template>
 
 <script setup>
-    import ProductItem from './ProductItem.vue';
+    import ProductItem from './ProductItem.vue'
     import {useCartStore} from '../stores/useCartStore'
 
     const data = useCartStore();
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
