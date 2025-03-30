@@ -47,6 +47,11 @@ export const useCartStore = defineStore('cart', {
                 }
                 toast.success("Your item has been updated", { timeout: 2000 });
             }
+        },
+        removeFromCart(item) {
+            const toast = useToast();
+            this.cartItems = this.cartItems.filter(product => product.id !== item.id)
+            toast.success("Item removed from the cart", { timeout: 2000 });
         }
     },
 });

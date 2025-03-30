@@ -29,6 +29,15 @@
                                 </td>
                                 <td>{{ item.price }}</td>
                                 <td>{{ item.price * item.quantity }}</td>
+                                <td>
+                                    <i class="bi bi-cart-x text-danger fw-bold" @click="data.removeFromCart(item)"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" colspan="4">Total</th>
+                                <td class="text-center" colspan="4">
+                                    <span class="badge bg-danger rounded-pill">$ {{ data.cartItems.reduce((acc, item) => acc+= item.price * item.quantity, 0) }}</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
